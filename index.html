@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSITAS INDONESIA</title>
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #FFFF00;
+            color: black;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .sidebar .contact-info {
+            margin-top: 20px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .main-content h1 {
+            font-size: 28px;
+            color: #4A4A8A;
+        }
+        .main-content p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Daftar isi</h1>
+        <ul>
+            <li><a href="#" onclick="showContent('sejarah')">Sejarah</a></li>
+            <li><a href="#" onclick="showContent('fakultas')">Fakultas</a></li>
+            <li><a href="#" onclick="showContent('fasilitas')">Fasilitas</a></li>
+            <li><a href="#" onclick="showContent('jalur penerimaan')">Jalur penerimaan</a></li>
+            <li><a href="#" onclick="showContent('prestasi')">Prestasi</a></li>
+            <br>
+            <li><a href="#" onclick="showContent('contact')">Contact Us</a></li>
+        </ul>
+        <div class="contact-info">
+            <p>Phone: (021) 7867222</p>
+            <p>Address: Jl. Margonda Raya, Pondok Cina, Kecamatan Beki.<br>Kota Depok,11124.</p>
+        </div>
+    </div>
+    <div class="main-content" id="content">
+        <img src "https://assets.onecompiler.app/436w28sae/439bzpbr9/IMG_1481.jpeg" alt="Deskripsi Gambar" width="300">
+        <h1>SELAMAT DATANG!</h1>
+        <p><b> UNIVERSITAS INDONESIA</b></p></b> adalah Perguruan Tinggi Negeri Terbaik.</p>
+        <p>Universitas Indonesia adalah salah satu universitas terbesar dan tertua di Indonesia, dengan sejarah yang panjang.</p>
+        <p>Pendiriannya (1849): UI berawal dari sebuah sekolah kedokteran yang didirikan oleh pemerintah Hindia Belanda pada tahun 1849, bernama School Tot Opleiding Van Indische Artsen (STOVIA), yang bertujuan untuk mendidik dokter bagi kebutuhan pemerintahan kolonial di Indonesia.</p>
+        <p>Perubahan Menjadi Universitas (1949): Setelah Indonesia merdeka, STOVIA diubah menjadi Fakultas Kedokteran di Universitas Indonesia yang baru berdiri. Universitas Indonesia resmi didirikan pada 2 Februari.</p>
+    </div>
+    <script>
+        function showContent(section) {
+            const content = document.getElementById('content');
+            switch (section) {
+                case 'sejarah':
+                    content.innerHTML = '<h1>Sejarah</h1><p>Universitas Indonesia merupakan salah satu universitas terbesar dan tertua di Indonesia. Universitas Indonesia berawal dari sebuah sekolah kedokteran yang didirikan oleh pemerintah Hindia Belanda pada tahun 1849, bernama School Tot Opleiding Van Indische Artsen (STOVIA) yang bertujuan untuk mendidik dokter bagi kebutuhan pemerintah kolonial di Indonesia. Setelah Indonesia merdeka, STOVIA diubah menjadi fakultas kedokteran di Universitas Indonesia yang baru berdiri. Universitas Indonesia resmi didirikan pada 2 Februari.</p>' ;
+                    break;
+                case 'fakultas':
+                    content.innerHTML = '<h1>Fakultas</h1><p>Universitas Indonesia mempunyai beberapa fakultas, diantaranya <br> fakultas kedokteran, kedokteran gigi, matematikan dan ilmu pengetahuan alam, teknik, farmasi, ilmu keperawatan, kesehatan masyarakat, ilmu komputer, hukum, psikologi, sosial dan ilmu politik, ekonomi dan bisnis, ilmu budaya, ilmu administrasi, pendidikan vokasi.</p>';
+                    break;
+                case 'fasilitas':
+                    content.innerHTML = '<h1>Fasilitas</h1><p> Universitas Indonesia memiliki berbagai fasilitas, diantaranya BIKUN UI sebagai transportasi, perpustakaan, laboratorium, sarana olahraga dan beberapa fasilitas umum, seperti <br> laboratorium komputer, sarana ibadah, ruang apung, cinema, dan gym.</p>';
+                    break;
+                case 'jalur penerimaan':
+                    content.innerHTML = '<h1>Jalur penerimaan</h1><p>Universitas Indonesia membuka jalur penerimaan melalui Rapor seperti SNBP, melalui tes seperti SNBT dua itu merupakan jalur umum yang diselenggarakan oleh pemerintah. Jalur mandiri UI seperti PPKB UI yang melalui rapor dan essay, SIMAK UI melalui tes, dan jalur masuk secara internasional</p>';
+                    break;
+                case 'prestasi':
+                    content.innerHTML = '<h1>Prestasi</h1><p>Berbagai prestasi telah diraih oleh Universitas Indonesia, yang paling ikonik adalah menjadi kampus terbaik No.1 di Indonesia selama bertahun tahun hingga saat ini.</p>';
+                    break;
+                case 'contact':
+                    content.innerHTML = '<h1>Contact Us</h1><p>Phone: (021) 7867222<br>Address: Jl. Margonda Raya, Pondok Cina, Kecamatan Beji, Kota Depok 11124.</p>';
+                    break;
+                default:
+                    content.innerHTML = '<h1>SELAMAT DATANG!</h1><p><b>Universitas Indonesia</b> adalah Perguruan Tinggi Negeri Terbaik.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
